@@ -1,0 +1,152 @@
+html:root {
+  --sedan-bg: hsl(31, 77%, 52%);
+  --suv-bg: hsl(184, 100%, 22%);
+  --luxury-bg: hsl(179, 100%, 13%);
+  --white: #f2f2f2;
+  --p-color: hsla(0, 0%, 100%, 0.75);
+  --other-text-color: hsl(0, 0%, 95%);
+}
+
+
+body {
+  background-color: var(--#f2f2f2);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.all-cols {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  height: 50vh;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+
+  padding: 3.75rem;
+
+  width: 33%;
+  height: 100%;
+
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.col > img {
+  width: 5rem;
+}
+
+.col > h1 {
+  font-family: 'Big Shoulders Display', cursive;
+  flex-grow: 1;
+  color: var(--other-text-color);
+  margin: 1.875rem 0;
+  font-size: 3rem;
+}
+
+.col > p {
+  flex-grow: 20;
+  line-height: 2;
+  color: var(--p-color);
+  font-size: .938rem;
+  width: 90%;
+}
+
+.col > a {
+  text-decoration: none;
+  border-color: var(--other-text-color);
+  background-color: var(--other-text-color);
+
+  border-radius: 1.563rem;
+  border-width: .125rem;
+  border-style: solid;
+
+  width: 7.5rem;
+  padding: .625rem;
+
+  text-align: center;
+}
+
+.sedan-col {
+  background-color: var(--sedan-bg);
+  border-radius: .625rem 0 0 .625rem;
+}
+
+.suv-col {
+  background-color: var(--suv-bg);
+}
+
+.luxury-col {
+  background-color: var(--luxury-bg);
+  border-radius: 0 .625rem .625rem 0;
+}
+
+.sedan-col > a {
+  color: var(--sedan-bg);
+}
+
+.suv-col > a {
+  color: var(--suv-bg);
+}
+
+.luxury-col > a {
+  color: var(--luxury-bg);
+}
+
+a:hover {
+  color: var(--other-text-color);
+}
+
+.sedan-col > a:hover {
+  background-color: var(--sedan-bg);
+}
+
+.suv-col > a:hover {
+  background-color: var(--suv-bg);
+}
+
+.luxury-col > a:hover {
+  background-color: var(--luxury-bg);
+}
+
+@media (max-width: 1440px) {
+  .body {
+    height: 50vh;
+  }
+
+  .all-cols {
+    flex-direction: column;
+    height: 90%;
+    margin: 50px 0;
+    width: 100%;
+  }
+
+  .col {
+    width: 60%;
+  }
+
+  .col > h1 {
+    margin: 20px 0 10px;
+  }
+
+  .col > p {
+    margin: 0 0 20px 0
+  }
+
+  .col > a {
+    margin-bottom: 0;
+  }
+
+  .sedan-col {
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .luxury-col {
+    border-radius: 0px 0px 10px 10px;
+  }
+}
